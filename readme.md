@@ -100,7 +100,7 @@ Instead of a&nbsp;UTF-8 string, the specification can also contain an explicit `
 }
 ```
 
-Note that&nbsp;-- depending on the rendering mode&nbsp;-- at least one of the attributes ```utf8```, ```pango``` or&nbsp;```xelatex``` should be present.
+Note that&nbsp;– depending on the rendering mode&nbsp;– at least one of the attributes ```utf8```, ```pango``` or&nbsp;```xelatex``` should be present.
 
 
 ## <a name="devanagari"></a>Devanāgarī resources
