@@ -4,12 +4,10 @@ import io
 import os
 import sys
 import argparse
-#import string
 import json
 import subprocess
 
 def EscapeFileName(unsafeFileName):
-	#safeFileName = ''.join(c for c in unsafeFileName if c.isalnum() or c in ('_')).strip()
 	safeFileName = ''.join(c if c.isalnum() or c in ('_', '-') else '_' for c in unsafeFileName).strip()
 	if 0 < len(safeFileName):
 		return safeFileName
