@@ -14,7 +14,7 @@ This is a script that generates&nbsp;PNGs for a set of character, as specified i
 
 ```
 usage: generate-from-json.py [-h] --engine {pango,xelatex}
-							 JsonSpecificationFile
+                             JsonSpecificationFile
 ```
 
 
@@ -22,8 +22,8 @@ usage: generate-from-json.py [-h] --engine {pango,xelatex}
 The JSON specification consists has two main attributes: ```settings``` and&nbsp;```subsets```. They are further specified below. The top level structure of the&nbsp;JSON&nbsp;file is therefore:
 ```javascript
 {
-	"settings": {...},
-	"subsets": {...}
+  "settings": {...},
+  "subsets": {...}
 }
 ```
 
@@ -37,10 +37,10 @@ This contains specific settings for the data set:
 For the latter two, the character string to be rendered will be inserted into the skeleton string at the point marked by&nbsp;```{0}``` and the font name will be inserted at the point marked by&nbsp;```{1}```.
 ```javascript
 {
-	"name": "Devanāgarī", 
-	"defaultFont": "Siddhanta",
-	"pango": "pango:<markup><span font_family=\"{1}\" size=\"192000\"> {0} </span></markup>",
-	"xelatex": "\\documentclass{{minimal}}\n\\usepackage{{fontspec}}\n\\usepackage{{xcolor}}\n\\setmainfont[Script=Devanagari]{{{1}}}\n\\begin{{document}}\n{0}\n\\end{{document}}"
+  "name": "Devanāgarī", 
+  "defaultFont": "Siddhanta",
+  "pango": "pango:<markup><span font_family=\"{1}\" size=\"192000\"> {0} </span></markup>",
+  "xelatex": "\\documentclass{{minimal}}\n\\usepackage{{fontspec}}\n\\usepackage{{xcolor}}\n\\setmainfont[Script=Devanagari]{{{1}}}\n\\begin{{document}}\n{0}\n\\end{{document}}"
 }
 ```
 
@@ -51,24 +51,24 @@ Each character string object is identified by a&nbsp;```name``` and can have mul
 
 ```javascript
 {
-	"vowels":
-	[ 
-		{
-			"name": "a",
-			"renditions": [
-				{ "utf8": "अ" }, 
-				{ "utf8": "अ", "font": "Siddhanta2" } 
-			]
-		},
-		{
-			"name": "ā",
-			"renditions": [
-				{ "utf8": "आ" }, 
-				{ "utf8": "आ", "font": "Siddhanta2" } 
-			]
-		}
-	],
-	"consonants": [...]
+  "vowels":
+  [ 
+    {
+      "name": "a",
+      "renditions": [
+        { "utf8": "अ" }, 
+        { "utf8": "अ", "font": "Siddhanta2" } 
+      ]
+    },
+    {
+      "name": "ā",
+      "renditions": [
+        { "utf8": "आ" }, 
+        { "utf8": "आ", "font": "Siddhanta2" } 
+      ]
+    }
+  ],
+  "consonants": [...]
 }
 ```
 ##### <a name="json_rendering"></a>Rendering specification
@@ -78,25 +78,25 @@ Instead of a&nbsp;UTF-8 string, the specification can also contain an explicit `
 
 ```javascript
 {
-	"name": "a-mirrored",
-	"renditions":
-	[
-		{
-			"utf8": "अ",
-			"pango-flop": true,
-			"xelatex": "\\reflectbox{अ}"
-		}
-	]
+  "name": "a-mirrored",
+  "renditions":
+  [
+    {
+      "utf8": "अ",
+      "pango-flop": true,
+      "xelatex": "\\reflectbox{अ}"
+    }
+  ]
 },
 {
-	"name": "a-red",
-	"renditions":
-	[
-		{
-			"pango": "<span color=\"red\">अ</span>",
-			"xelatex": "{\\color{red}अ}"
-		}
-	]
+  "name": "a-red",
+  "renditions":
+  [
+    {
+      "pango": "<span color=\"red\">अ</span>",
+      "xelatex": "{\\color{red}अ}"
+    }
+  ]
 }
 ```
 
