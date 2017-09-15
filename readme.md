@@ -13,8 +13,8 @@ This is a collection of resources I have gathered for several (image based) [Mem
 This is a script that generates&nbsp;PNGs for a set of character, as specified in a JSON file. It calls [ImageMagick](https://www.imagemagick.org/) for creating the&nbsp;PNGs and uses either [Pango](https://developer.gnome.org/pango/stable/PangoMarkupFormat.html) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX) to render the characters.
 
 ```
-usage: generate-from-json.py [-h] --engine {pango,xelatex}
-                             JsonSpecificationFile
+usage: render-characters.py [-h] --engine {pango,xelatex}
+                            JsonSpecificationFile
 ```
 
 
