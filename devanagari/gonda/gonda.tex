@@ -1,0 +1,340 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass{article}
+
+\usepackage{fixltx2e}
+\usepackage{fontspec}
+\usepackage{xunicode,xltxtra}
+\usepackage[a5paper]{geometry}
+\usepackage{indentfirst}
+\usepackage[sc]{titlesec}
+\usepackage[%
+	pdfauthor={Jan Gonda, Gordon B. Ford jr. (translation)},
+	pdftitle={A Concise Elementary Grammar of the Sanskrit Language},
+	pdfkeywords={sanskrit devanāgarī devanagari}
+	]{hyperref}
+
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont{CMU Serif}
+
+% devanagari fonts
+\newfontfamily\Siddhanta[Script=Devanagari]{Siddhanta}
+\newfontfamily\SiddhantaII[Script=Devanagari]{Siddhanta2}
+% font wrappers
+\newcommand{\siddhanta}[1]{\mbox{\Siddhanta#1}}
+\newcommand{\siddhantaII}[1]{\mbox{\SiddhantaII#1}}
+\newcommand{\siddhantafontname}[1]{\textit{Siddhanta#1}}
+%custom characters (not available in any font)
+\newcommand{\shu}{\siddhanta{{}\kern-.5em{ꣻ}\kern-.9em{ ा}\kern-.65em{ ु}}}
+\newcommand{\shU}{\siddhanta{{}\kern-.5em{ꣻ}\kern-.9em{ ा}\kern-.65em{ ू}}}
+\newcommand{\STrya}{\siddhanta{{}\kern-.7em\raisebox{.1em}[0pt][0pt]{ ᳙}\kern+.1em{}}}
+\newcommand{\lla}{\siddhanta{{}\kern-.6em{ ा}}}
+\newcommand{\jja}{\siddhanta{{}\kern-.65em{ ा}}}
+
+% typesetting helpers
+\newcommand{\lingual}[1]{\textit{#1}}
+\newcommand{\siddhantalingual}[2]{\siddhanta{#1}~\lingual{#2}}
+\newcommand{\siddhantaIIlingual}[2]{\siddhantaII{#1}~\lingual{#2}}
+\newcommand{\alt}[2]{#1~[#2]}
+\newcommand{\altlingual}[3]{\alt{#1}{#2}~\lingual{#3}}
+\newcommand{\siddhantasiddhantalingual}[3]{\alt{\siddhanta{#1}}{\siddhanta{#2}}~\lingual{#3}}
+\newcommand{\siddhantasiddhantaII}[2]{\alt{\siddhanta{#1}}{\siddhantaII{#2}}}
+\newcommand{\siddhantaIIsiddhanta}[2]{\alt{\siddhantaII{#1}}{\siddhanta{#2}}}
+\newcommand{\siddhantaIIsiddhantalingual}[3]{\siddhantaIIsiddhanta{#1}{#2}~\lingual{#3}}
+
+\pagestyle{empty}
+
+\begin{document}
+\title{\textit{\normalsize Excerpt from:}\\A Concise Elementary Grammar of the Sanskrit Language}
+\author{Jan Gonda}
+\date{2nd edition, 2006\\\footnotesize ISBN-13 978-08173-5261-5}
+\maketitle
+\thispagestyle{empty}
+
+\renewcommand{\abstractname}{Notes}
+\begin{abstract}
+	This document contains a digitized version of the first two chapters of Gonda's book which describe the devanāgarī script and provide a reading exercise, respectively.\\
+	
+	The font family \siddhantafontname{} has been used to render the devanāgarī characters. It was created by Mihail Bayaryn (Міхаіл Баярын) and is available for free.\footnote{\url{https://sites.google.com/site/bayaryn/}}
+	
+	The \siddhantafontname{} font family provides multiple variations of devanāgarī glyphs. This document aims to provide Gonda's description of the devanāgarī script. Therefore glyphs have been chosen to match the original printed glyphs as closely as possible.\\
+	
+	For some devanāgarī characters and ligatures there exist style variations. When relevant, they are included in the following manner:~\siddhantaIIsiddhanta{अ}{अ}. In the case of presenting a glyph that is normally added on to another glyph, a dotted circle~(\siddhanta{◌}) is used as a placeholder to represent the latter.
+\end{abstract}
+
+\clearpage
+
+\section*{The script}
+
+The most common of the Indic alphabets is the devanāgarī script, in which the individual signs as a rule express not only a vowel or only a consonant but a consonant with following vowel. The vowel which follows is \lingual{ă} if it is not specially designated. The devanāgarī alphabet is thus a syllabic script.\\
+
+\begin{center}
+	\def\arraystretch{1.5}
+	\begin{tabular}{lccccc}
+		\multicolumn{6}{c}{Consonant Signs with Following \lingual{ă}}\\
+		Velars & \siddhanta{क} & \siddhanta{ख} & \siddhanta{ग} & \siddhanta{घ} & \siddhanta{ङ}\\
+		 & \lingual{ka} & \lingual{kha} & \lingual{ga} & \lingual{gha} & \lingual{ṅa}\\
+		Palatals & \siddhanta{च} & \siddhanta{छ} & \siddhanta{ज} & \siddhantaIIsiddhanta{झ}{झ} & \siddhanta{ञ}\\
+		 & \lingual{ca} & \lingual{cha} & \lingual{ja} & \lingual{jha} & \lingual{ña}\\
+		Linguals & \siddhanta{ट} & \siddhanta{ठ} & \siddhanta{ड} & \siddhanta{ढ} & \siddhantaIIsiddhanta{ण}{ण}\\
+		 & \lingual{ṭa} & \lingual{ṭha} & \lingual{ḍa} & \lingual{ḍha} & \lingual{ṇa}\\
+		Dentals & \siddhanta{त} & \siddhanta{थ} & \siddhanta{द} & \siddhanta{ध} & \siddhanta{न}\\
+		 & \lingual{ta} & \lingual{tha} & \lingual{da} & \lingual{dha} & \lingual{na}\\
+		Labials & \siddhanta{प} & \siddhanta{फ} & \siddhanta{ब} & \siddhanta{भ} & \siddhanta{म}\\
+		 & \lingual{pa} & \lingual{pha} & \lingual{ba} & \lingual{bha} & \lingual{ma}\\
+		Semivowels & \siddhanta{य} & \siddhanta{र} & \siddhantaIIsiddhanta{ल}{ल} & \siddhanta{व}\\
+		 & \lingual{ya} & \lingual{ra} & \lingual{la} & \lingual{va}\\
+		Sibilants & \siddhantasiddhantaII{श}{श} & \siddhanta{ष} & \siddhanta{स}\\
+		 & \lingual{śa} & \lingual{ṣa} & \lingual{sa}\\
+		Aspirate & \siddhanta{ह}\\
+		 & \lingual{ha}\\
+	\end{tabular}
+\end{center}
+
+\clearpage
+
+The visarga~\lingual{ḥ} is designated by a colon after the preceding letter: \siddhanta{सः}~=~\lingual{saḥ}; the anusvāra~\alt{\lingual{ṃ}}{\lingual{ṁ}}\footnote{Gonda is in accordance with the International Alphabet of Sanskrit Transliteration (IAST) here, where the anusvara is transcribed with~\lingual{ṃ}. However, the use of~\lingual{ṁ} is also commonplace, e.g.~in ISO~15919.} by a dot over the preceding letter: \siddhanta{तं}~=~\lingual{taṃ}. \lingual{ṃ}~and~\lingual{ḥ} stand before~\lingual{k} in the alphabet or, if they represent a nasal or sibilant, in the place of these symbols.
+
+If the vowels stand in initial position and are not joined with the preceding consonant, then they are designated by the following signs:\\
+\begin{center}
+	\def\arraystretch{1.5}
+	\begin{tabular}{c}
+		\siddhantaIIsiddhantalingual{अ}{अ}{a},
+		\siddhantaIIsiddhantalingual{आ}{आ}{ā},
+		\siddhantalingual{इ}{i},
+		\siddhantalingual{ई}{ī},
+		\siddhantalingual{उ}{u},
+		\siddhantalingual{ऊ}{ū},
+		\siddhantaIIsiddhantalingual{ऋ}{ऋ}{ṛ},
+		\siddhantaIIsiddhantalingual{ॠ}{ॠ}{ṝ},
+		\siddhantalingual{ऌ}{ḷ},\\
+		\siddhantalingual{ए}{e},
+		\siddhantalingual{ऐ}{ai},
+		\siddhantaIIsiddhantalingual{ओ}{ओ}{o},
+		\siddhantaIIsiddhantalingual{औ}{औ}{au}
+	\end{tabular}
+\end{center}
+
+If vowels other than \lingual{ă} are joined to the above symbols, then they are represented in the following way:
+
+\begin{center}
+	\def\arraystretch{1.5}
+	\begin{tabular}{cclll}
+		\siddhantalingual{ा}{ā} & e.g. & \siddhantalingual{का}{kā}, & \siddhantalingual{धा}{dhā}, & \siddhantalingual{या}{yā}\\
+		\siddhantalingual{ि}{i} & e.g. & \siddhantalingual{चि}{ci}, & \siddhantalingual{ति}{ti}, & \siddhantalingual{यि}{yi}\\
+		\siddhantalingual{ी}{ī} & e.g. & \siddhantalingual{नी}{nī}, & \siddhantalingual{भी}{bhī}, & \siddhantalingual{यी}{yī}\\
+		\siddhantalingual{ु}{u} & e.g. & \siddhantalingual{कु}{ku}, & \siddhantalingual{रु}{ru}, & \siddhantasiddhantaII{शु}{शु} or \shu{}~\lingual{śu}\\
+		\siddhantalingual{ू}{ū} & e.g. & \siddhantalingual{रू}{rū}, & \siddhantalingual{हू}{hū}, & \siddhantasiddhantaII{शू}{शू} or \shU{}~\lingual{śū}\\
+		\siddhantalingual{ृ}{ṛ} & e.g. & \siddhantalingual{कृ}{kṛ}, & \siddhantalingual{धृ}{dhṛ}, & \siddhantalingual{हृ}{hṛ}\\
+		\siddhantalingual{ॄ}{ṝ} & e.g. & \siddhantalingual{कॄ}{kṝ}, & \siddhantalingual{तॄ}{tṝ}, & \siddhantalingual{हॄ}{hṝ}\\
+		\siddhantalingual{े}{e} & e.g. & \siddhantalingual{के}{ke}, & \siddhantalingual{ते}{te}, & \siddhantalingual{ये}{ye}\\
+		\siddhantalingual{ै}{ai} & e.g. & \siddhantalingual{कै}{kai}, & \siddhantalingual{तै}{tai}, & \siddhantalingual{षै}{ṣai}\\
+		\siddhantalingual{ो}{o} & e.g. & \siddhantalingual{को}{ko}, & \siddhantalingual{चो}{co}, & \siddhantalingual{भो}{bho}\\
+		\siddhantalingual{ौ}{au} & e.g. & \siddhantalingual{तौ}{tau}, & \siddhantalingual{नौ}{nau}, & \siddhantalingual{यौ}{yau}\\
+		\siddhantalingual{ॢ}{ḷ} & e.g. & \siddhantalingual{कॢ}{kḷ}, & \siddhantalingual{मॢ}{mḷ} & \\
+	\end{tabular}
+\end{center}
+
+The omission of an initial~\lingual{a} is designated by the avagraha~\siddhanta{ऽ}, e.g.:~\siddhantalingual{ते ऽपि}{te 'pi}.
+
+If a consonant without vowel is to be designated, then this is done by means of a stroke~\siddhanta{्}, called a virāma; e.g.:~\siddhantalingual{क्}{k}, \siddhantalingual{प्}{p}, \siddhantalingual{म्}{m}.
+
+If in a word or sentence two or more consonants immediately follow one another, then the above signs are joined in one group (ligature).
+
+If the first of the consonants to be joined ends on the right with a vertical stroke, then it is placed first with loss of this stroke: \siddhantalingual{न्}{n}~+~\siddhantalingual{त}{ta}:~\siddhantalingual{न्त}{nta}.
+
+If the first consonant does not end with the vertical stroke, then the following consonant is joined under the preceding one with loss of its horizontal stroke: \siddhantalingual{क्}{k}~+~\siddhantalingual{व}{va}:~\siddhantalingual{क्व}{kva}.
+
+Exceptions: \siddhantalingual{न}{na} and \siddhantaIIsiddhantalingual{ल}{ल}{la} as the second members of a ligature are usually placed underneath with loss of their horizontal stroke; \siddhantalingual{म}{ma} and \siddhantalingual{य}{ya} are in this case written after the first sign and in a more shortened form (s.~below). Note also \lingual{kta}, \lingual{ktha}, \lingual{kṣa}, \lingual{chya}, \lingual{jña}, \lingual{ñca}, \lingual{ñja}, \lingual{ṇṇa}, \lingual{tta}, \lingual{dda}, \lingual{ddha}, \lingual{dna}, \lingual{dbha}, \lingual{pta}, \lingual{hna}, \lingual{hva}.
+
+\lingual{r} before a cons.\ and before \lingual{ṛ} is designated by a hook placed above (\siddhanta{◌}); the latter stands completely to the right: \lingual{rka}:~\siddhanta{र्क}. \lingual{r} after a cons.\ is represented by a stroke placed under it: \lingual{pra}:~\siddhanta{प्र}. Especially to be noted: \lingual{tra}~\siddhanta{त्र}. More than two consonants are joined according to the same rules; s.~below.
+
+
+
+\subsection*{List of the most common ligatures}
+
+\siddhantalingual{क्क}{kka}, \siddhantalingual{क्ख}{kkha}, \siddhantalingual{क्त}{kta}, \siddhantasiddhantalingual{य}{क्त्य}{ktya}, \siddhantalingual{क्त्र}{ktra}, \siddhantasiddhantalingual{व}{क्त्व}{ktva},
+\siddhantalingual{क्थ}{ktha}, \siddhantalingual{क्न}{kna}, \siddhantalingual{क्म}{kma}, \siddhantalingual{क्य}{kya}, \siddhantalingual{क्र}{kra}, \siddhantaIIsiddhantalingual{क्ल}{क्ल}{kla}, \siddhantalingual{क्व}{kva},
+\siddhantaIIsiddhantalingual{क्ष}{क्ष}{kṣa}, \siddhantaIIsiddhantalingual{क्ष्म}{क्ष्म}{kṣma}, \siddhantaIIsiddhantalingual{क्ष्य}{क्ष्य}{kṣya}, \siddhantaIIsiddhantalingual{क्ष्व}{क्ष्व}{kṣva} --- \siddhantalingual{ख्य}{khya}, \siddhantalingual{ख्र}{khra} ---
+\siddhantalingual{ग्द}{gda}, \siddhantalingual{ग्ध}{gdha}, \siddhantalingual{ग्न}{gna}, \siddhantalingual{ग्भ}{gbha}, \siddhantalingual{ग्म}{gma}, \siddhantalingual{ग्य}{gya}, \siddhantalingual{ग्र}{gra},
+\siddhantalingual{ग्र्य}{grya}, \siddhantaIIsiddhantalingual{ग्ल}{ग्ल}{gla}, \siddhantalingual{ग्व}{gva} --- \siddhantalingual{घ्न}{ghna}, \siddhantalingual{घ्म}{ghma}, \siddhantalingual{घ्य}{ghya},
+\siddhantalingual{घ्र}{ghra} --- \siddhantalingual{ङ्क}{ṅka}, \siddhantaIIsiddhantalingual{ङ्क्ष}{ङ्क्ष}{ṅkṣa}, \siddhantalingual{ङ्ग}{ṅga}, \siddhantalingual{ङ्घ}{ṅgha}, \siddhantaIIsiddhantalingual{ङ्म}{ङ्म}{ṅma}.
+
+\siddhantasiddhantalingual{च्च}{}{cca}, \siddhantalingual{च्छ}{ccha}, \siddhantalingual{च्छ्र}{cchra}, \siddhantalingual{च्छ्व}{cchva}, \siddhantalingual{च्ञ}{cña}, \siddhantalingual{च्म}{cma},
+\siddhantalingual{च्य}{cya} --- \siddhantalingual{छ्य}{chya}, \siddhantalingual{छ्र}{chra} --- \siddhantasiddhantalingual{\jja{}}{ज्ज}{jja}, \siddhantasiddhantalingual{व}{ज्ज्व}{jjva}, \siddhantaIIsiddhantalingual{ज्झ}{ज्झ}{jjha},
+\siddhantasiddhantalingual{}{ज्ञ}{jña}, \siddhantaIIsiddhantalingual{य}{ज्ञ्य}{jñya}, \siddhantalingual{ज्म}{jma}, \siddhantalingual{ज्य}{jya}, \siddhantalingual{ज्र}{jra}, \siddhantalingual{ज्व}{jva} --- \siddhantalingual{ञ्च}{ñca},
+\siddhantalingual{ञ्छ}{ñcha}, \siddhantalingual{ञ्ज}{ñja}.
+
+\siddhantalingual{ट्क}{ṭka}, \siddhantalingual{ट्ठ}{ṭṭha}, \siddhantalingual{ट्य}{ṭya} --- \siddhantalingual{ठ्य}{ṭhya}, \siddhantalingual{ठ्र}{ṭhra} --- \siddhantalingual{ड्ग}{ḍga},
+\siddhantalingual{ड्य}{ḍya} --- \siddhantaIIsiddhantalingual{ढ्म}{ढ्म}{ḍhma}, \siddhantalingual{ढ्य}{ḍhya} --- \siddhantaIIsiddhantalingual{ण्ट}{ण्ट}{ṇṭa}, \siddhantaIIsiddhantalingual{ण्ठ}{ण्ठ}{ṇṭha}, \siddhantaIIsiddhantalingual{ण्ड}{ण्ड}{ṇḍa},
+\siddhantaIIsiddhantalingual{ण्ढ}{ण्ढ}{ṇḍha}, \siddhantaII{ण्ण} or~\siddhantaIIsiddhantalingual{ण}{ण्ण}{ṇṇa}, \siddhantaIIsiddhantalingual{ण्म}{ण्म}{ṇma}, \siddhantaIIsiddhantalingual{ण्य}{ण्य}{ṇya}, \siddhantaIIsiddhantalingual{ण्व}{ण्व}{ṇva}.
+
+\siddhantalingual{त्क}{tka}, \siddhantalingual{त्त}{tta}, \siddhantalingual{त्त्य}{ttya}, \siddhantasiddhantalingual{}{त्त्र}{ttra}, \siddhantalingual{त्त्व}{ttva}, \siddhantalingual{त्थ}{ttha},
+\siddhantalingual{त्न}{tna}, \siddhantalingual{त्प}{tpa}, \siddhantalingual{त्म}{tma}, \siddhantalingual{त्म्य}{tmya}, \siddhantalingual{त्य}{tya}, \siddhantalingual{त्र}{tra},
+\siddhantalingual{त्र्य}{trya}, \siddhantalingual{त्व}{tva}, \siddhantalingual{त्स}{tsa}, \siddhantalingual{त्स्न}{tsna}, \siddhantalingual{त्स्य}{tsya} ---  \siddhantalingual{थ्य}{thya} ---
+\siddhantalingual{द्ग}{dga}, \siddhantalingual{द्ग्य}{dgya}, \siddhantalingual{द्ग्र}{dgra}, \siddhantalingual{द्द}{dda}, \siddhantalingual{द्द्र}{ddra}, \siddhantalingual{द्द्व}{ddva}, \siddhantalingual{द्ध}{ddha},
+\siddhantalingual{द्ध्न}{ddhna}, \siddhantalingual{द्ध्य}{ddhya}, \siddhantalingual{द्न}{dna}, \siddhantalingual{द्ब}{dba}, \siddhantalingual{द्भ}{dbha}, \siddhantalingual{द्भ्य}{dbhya},
+\siddhantalingual{द्म}{dma}, \siddhantalingual{द्य}{dya}, \siddhantalingual{द्र}{dra}, \siddhantalingual{द्र्य}{drya}, \siddhantalingual{द्व}{dva}, \siddhantalingual{द्व्य}{dvya} --- \siddhantalingual{ध्न}{dhna},
+\siddhantalingual{ध्म}{dhma}, \siddhantalingual{ध्य}{dhya}, \siddhantalingual{ध्र}{dhra}, \siddhantalingual{ध्व}{dhva} --- \siddhantalingual{न्त}{nta}, \siddhantalingual{न्त्य}{ntya},
+\siddhantalingual{न्त्र}{ntra}, \siddhantalingual{न्थ}{ntha}, \siddhantalingual{न्द}{nda}, \siddhantalingual{न्द्ध्य}{nddhya}, \siddhantalingual{न्द्द्र}{nddra}, \siddhantalingual{न्ध}{ndha},
+\siddhantalingual{न्ध्र}{ndhra}, \siddhantalingual{न्न}{nna}, \siddhantalingual{न्म}{nma}, \siddhantalingual{न्य}{nya}, \siddhantalingual{न्र}{nra}, \siddhantalingual{न्व}{nva}, \siddhantalingual{न्स}{nsa}.
+
+\siddhantalingual{प्त}{pta}, \siddhantalingual{प्त्य}{ptya}, \siddhantalingual{प्न}{pna}, \siddhantalingual{प्म}{pma}, \siddhantalingual{प्य}{pya}, \siddhantalingual{प्र}{pra}, \siddhantaIIsiddhantalingual{प्ल}{प्ल}{pla},
+\siddhantalingual{प्स}{psa} --- \siddhantalingual{फ्य}{phya} --- \siddhantasiddhantalingual{ज}{ब्ज}{bja}, \siddhantalingual{ब्द}{bda}, \siddhantalingual{ब्ध}{bdha}, \siddhantasiddhantalingual{न}{ब्न}{bna},
+\siddhantasiddhantalingual{ब}{ब्ब}{bba}, \siddhantalingual{ब्भ}{bbha}, \siddhantalingual{ब्र}{bra} --- \siddhantalingual{भ्य}{bhya}, \siddhantalingual{भ्र}{bhra} --- \siddhantalingual{म्न}{mna},
+\siddhantalingual{म्प}{mpa}, \siddhantalingual{म्ब}{mba}, \siddhantalingual{म्भ}{mbha}, \siddhantalingual{म्य}{mya}, \siddhantalingual{म्र}{mra}, \siddhantaIIsiddhantalingual{म्ल}{म्ल}{mla}.
+
+\siddhantalingual{य्य}{yya}, \siddhantalingual{य्व}{yva} --- \siddhantalingual{र्क}{rka}, \siddhantalingual{र्ज}{rja}, \siddhantalingual{र्ध}{rdha} --- \siddhantalingual{ल्क}{lka},
+\siddhantalingual{ल्य}{lya}, \lla{} or~\siddhantaIIsiddhanta{ल}{ल} or~\siddhantaIIsiddhantalingual{ल्ल}{ल्ल}{lla}, \siddhantalingual{ल्व}{lva} --- \siddhantalingual{व्य}{vya}, \siddhantalingual{व्र}{vra}.
+
+\siddhanta{श्च} or~\siddhantasiddhantalingual{च}{च}{śca}, \siddhantalingual{श्न}{śna}, \siddhantasiddhantaII{श्य}{श्य} or~\siddhantalingual{य}{śya}, \siddhantalingual{श्र}{śra},
+\siddhantalingual{श्र्य}{śrya}, \siddhantaIIsiddhantalingual{श्ल}{श्ल}{śla}, \siddhantalingual{श्व}{śva}, \siddhantalingual{श्व्य}{śvya} --- \siddhantalingual{ष्क}{ṣka}, \siddhantalingual{ष्क्र}{ṣkra},
+\siddhantalingual{ष्ट}{ṣṭa}, \siddhantalingual{ष्ट्य}{ṣṭya}, \siddhantalingual{ष्ट्र}{ṣṭra}, \siddhantasiddhantalingual{\STrya{}}{ष्ट्र्य}{ṣṭrya}, \siddhantalingual{ष्ट्व}{ṣṭva}, \siddhantalingual{ष्ठ}{ṣṭha}, \siddhantalingual{ष्ठ्य}{ṣṭhya},
+\siddhantaIIsiddhantalingual{ष्ण}{ष्ण}{ṣṇa}, \siddhantaIIsiddhantalingual{ष्ण्य}{ष्ण्य}{ṣṇya}, \siddhantalingual{ष्प}{ṣpa}, \siddhantalingual{ष्प्र}{ṣpra}, \siddhantalingual{ष्म}{ṣma}, \siddhantalingual{ष्य}{ṣya},
+\siddhantalingual{ष्व}{ṣva} --- \siddhantalingual{स्क}{ska}, \siddhantalingual{स्ख}{skha}, \siddhantalingual{स्त}{sta}, \siddhantalingual{स्त्य}{stya}, \siddhantalingual{स्त्र}{stra},
+\siddhantalingual{स्त्व}{stva}, \siddhantalingual{स्थ}{stha}, \siddhantalingual{स्न}{sna}, \siddhantalingual{स्प}{spa}, \siddhantalingual{स्फ}{spha}, \siddhantalingual{स्म}{sma},
+\siddhantalingual{स्म्य}{smya}, \siddhantalingual{स्य}{sya}, \siddhantalingual{स्र}{sra}, \siddhantalingual{स्व}{sva}.
+
+\siddhantaIIsiddhantalingual{ह्ण}{ह्ण}{hṇa}, \siddhantaIIsiddhantalingual{ह्न}{ह्न}{hna}, \siddhantalingual{ह्म}{hma}, \siddhantalingual{ह्य}{hya}, \siddhantaIIsiddhantalingual{ह्र}{ह्र}{hra}, \siddhantaIIsiddhantalingual{ह्ल}{ह्ल}{hla},
+\siddhanta{ह्व} or~\siddhantaIIlingual{ह्व}{hva}.
+
+\subsection*{Symbols for the numerals}
+\begin{center}
+	\def\arraystretch{1.5}
+	\begin{tabular}{cccccccccc}
+		\siddhantaIIsiddhanta{१}{१} & \siddhanta{२} & \siddhanta{३} & \siddhantaIIsiddhanta{४}{४} & \siddhantasiddhantaII{५}{५} & \siddhantaIIsiddhanta{६}{६} & \siddhanta{७} & \siddhantaIIsiddhanta{८}{८} & \siddhantasiddhantaII{९}{९} & \siddhanta{०}\\
+		\lingual{1} & \lingual{2} & \lingual{3} & \lingual{4} & \lingual{5} & \lingual{6} & \lingual{7} & \lingual{8} & \lingual{9} & \lingual{0}\\
+	\end{tabular}\\
+	\begin{tabular}{cc}
+		\siddhantaII{१}\siddhanta{९}\siddhantaII{४}\siddhanta{०} & \lingual{1940}\\
+	\end{tabular}
+\end{center}
+
+\subsection*{Word division}
+Within a sentence word division occurs if a word ends in a vowel, anusvāra or visarga and the following word begins with a cons.,\ just as according to~\S\S7--9;~15. Otherwise either phonetic fusion or union into one syllabic sign occurs with observance of the pertinent sandhi rules.
+
+\subsection*{Punctuation}
+This script depends solely on~\siddhanta{।} for the designation of a minor sentence segment or the end of a half strophe, and on~\siddhanta{॥} to designate a large segment or the end of a strophe.
+
+\section*{Reading exercise}
+\let\latin\lingual
+\def\hyphlat{&\latin{-}&}
+\def\hyphsans{&\siddhanta{-}&}
+\newcommand{\row}[3]{\begin{tabular}{#1}#2\\#3\\\end{tabular}\\[.7em]}
+
+\row{ccc@{}c@{}c@{}c@{}c@{}c@{}c}
+{\siddhantaII{अस्माकं} & \siddhantaII{मुद्रणालये} & \siddhantaII{वेद} \hyphsans \siddhantaII{वेदान्त} \hyphsans \siddhantaII{धर्म}\siddhanta{शा}\siddhantaII{स्त्र} \hyphsans \siddhantaII{प्रयोग-}}
+{\latin{asmākaṃ} & \latin{mudraṇālaye} & \latin{veda} \hyphlat \latin{vedānta} \hyphlat \latin{dharmaśāstra} \hyphlat \latin{prayoga-}}
+\row{c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}@{}c@{}c@{}c@{}c}
+{\siddhantaII{योग} \hyphsans \siddhantaII{सांख्य} \hyphsans \siddhantaII{ज्योतिष} \hyphsans \siddhantaII{पुराणेतिहास} \hyphsans \siddhantaII{वैद्यक} \hyphsans \siddhantaII{मंत्र} \hyphsans \siddhantaII{स्तोत्र-}}
+{\latin{yoga} \hyphlat \latin{sāṃkhya} \hyphlat \latin{jyotiṣa} \hyphlat \latin{purāṇetihāsa} \hyphlat \latin{vaidyaka} \hyphlat \latin{maṃtra} \hyphlat \latin{stotra-}}
+\row{c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c}
+{\siddhantaII{को}\siddhanta{श} \hyphsans \siddhantaII{काव्य} \hyphsans \siddhantaII{चम्पू} \hyphsans \siddhantaII{नाटकालंकार} \hyphsans \siddhantaII{संगीत} \hyphsans \siddhantaII{नीति} \hyphsans \siddhantaII{कथाग्रंथाः}}
+{\latin{kośa} \hyphlat \latin{kāvya} \hyphlat \latin{campū} \hyphlat \latin{nāṭakālaṃkāra} \hyphlat \latin{saṃgīta} \hyphlat \latin{nīti} \hyphlat \latin{kathāgraṃthāḥ,}}
+\row{ccccc}
+{\siddhantaII{बहवः} & \siddhantaII{स्त्रीणां} & \siddhantaII{चोपयुक्ता} & \siddhantaII{ग्रंथाः} & \siddhantaII{बृह{यो}तिषार्णवनामा}}
+{\latin{bahavaḥ} & \latin{strīṇāṃ} & \latin{copayuktā} & \latin{graṃthāḥ} & \latin{bṛhajjyotiṣārṇavanāmā}}
+\row{cccc}
+{\multicolumn{3}{c}{\siddhantaII{बहुविचित्रचित्रितोऽयमपूर्वग्रन्थः ।}} & \siddhantaII{संस्कृतभाषया}}
+{\latin{bahuvicitracitrito} & \latin{'yam} & \latin{apūrvagranthaḥ.} & \latin{saṃskṛtabhāṣayā}}
+\row{c}
+{\siddhantaII{हिन्दीमार्वाड्यन्यतरभाषाग्रन्थास्तत्तच्छास्त्राद्यर्थानु-}}
+{\latin{hindīmārvāḍyanyatarabhāṣāgranthāstattacchāstrādyarthānu-}}
+\row{cccc}
+{\siddhantaII{वादकाः} & \siddhantaII{चित्राणि} & \siddhantaII{पुस्तकमुद्रणोपयोगिन्यो} & \siddhantaII{यावत्यस्सा-}}
+{\latin{vādakāḥ} & \latin{citrāṇi} & \latin{pustakamudraṇopayoginyo} & \latin{yāvatyassā-}}
+\row{cc}
+{\siddhantaII{मग्र्यः} & \siddhantaII{स्वस्वलौकिकव्यवहारोपयोगिचित्रचित्रितालि-}}
+{\latin{magryaḥ} & \latin{svasvalaukikavyavahāropayogicitracitritāli-}}
+\row{ccccc}
+{\siddhantaII{खितपत्रवत्पुस्तकानि} & \siddhantaII{च} & \siddhantaII{मुद्रयित्वा} & \siddhantaII{प्रका}\siddhanta{श}\siddhantaII{न्ते} & \siddhantaII{सुलभेन}}
+{\latin{khitapatravatpustakāni} & \latin{ca} & \latin{mudrayitvā} & \latin{prakāśante} & \latin{sulabhena}}
+\row{cccc}
+{\siddhantaII{मूल्येन} & \siddhantaII{विक्रयाय ।} & \siddhantaII{येषां} & \siddhantaII{यत्राभिरुचिस्तत्तत्पुस्तकाद्यु-}}
+{\latin{mūlyena} & \latin{vikrayāya.} & \latin{yeṣāṃ} & \latin{yatrābhirucistattatpustakādyu-}}
+\row{ccccc}
+{\siddhantaII{पलब्धय} & \siddhantaII{एवं} & \siddhantaII{नव्यतया} & \siddhantaII{स्वस्वपुस्तकानि} & \siddhantaII{मुमुद्रयि-}}
+{\latin{palabdhaya} & \latin{evaṃ} & \latin{navyatayā} & \latin{svasvapustakāni} & \latin{mumudrayi-}}
+\row{cccc}
+{\siddhantaII{षुभिः} & \siddhantaII{सुलभयोग्यमौल्येन} & \siddhantaII{सीसकाक्षरैः} & \siddhantaII{स्वच्छोत्त-}}
+{\latin{ṣubhiḥ} & \latin{sulabhayogyamaulyena} & \latin{sīsakākṣaraiḥ} & \latin{svacchotta-}}
+\row{ccc}
+{\siddhantaII{मोत्तमपत्रेषु} & \siddhantaII{मुद्रिततत्पुस्तकानां} & \siddhantaII{स्वस्वसमयानुसारे-}}
+{\latin{mottamapatreṣu} & \latin{mudritatatpustakānāṃ} & \latin{svasvasamayānusāre-}}
+\row{ccccc}
+{\siddhantaII{णोपलब्धये} & \siddhantaII{च} & \siddhantaII{पत्रिकाद्वारातैः} & \siddhantaII{प्रेषणीयो} & \siddhantaII{ऽस्मि ॥}}
+{\latin{ṇopalabdhaye} & \latin{ca} & \latin{patrikādvārātaiḥ} & \latin{preṣaṇīyo} & \latin{'smi.}}
+
+\subsection*{Using the default glyphs of the font \siddhantafontname{}}
+\def\hyphsans{&\sanskrit{-}&}
+\let\sanskrit\siddhanta
+\newcommand{\readingexercise}{
+	\row{ccc@{}c@{}c@{}c@{}c@{}c@{}c}
+	{\sanskrit{अस्माकं} & \sanskrit{मुद्रणालये} & \sanskrit{वेद} \hyphsans \sanskrit{वेदान्त} \hyphsans \sanskrit{धर्मशास्त्र} \hyphsans \sanskrit{प्रयोग-}}
+	{\latin{asmākaṃ} & \latin{mudraṇālaye} & \latin{veda} \hyphlat \latin{vedānta} \hyphlat \latin{dharmaśāstra} \hyphlat \latin{prayoga-}}
+	\row{c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}@{}c@{}c@{}c@{}c}
+	{\sanskrit{योग} \hyphsans \sanskrit{सांख्य} \hyphsans \sanskrit{ज्योतिष} \hyphsans \sanskrit{पुराणेतिहास} \hyphsans \sanskrit{वैद्यक} \hyphsans \sanskrit{मंत्र} \hyphsans \sanskrit{स्तोत्र-}}
+	{\latin{yoga} \hyphlat \latin{sāṃkhya} \hyphlat \latin{jyotiṣa} \hyphlat \latin{purāṇetihāsa} \hyphlat \latin{vaidyaka} \hyphlat \latin{maṃtra} \hyphlat \latin{stotra-}}
+	\row{c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c}
+	{\sanskrit{कोश} \hyphsans \sanskrit{काव्य} \hyphsans \sanskrit{चम्पू} \hyphsans \sanskrit{नाटकालंकार} \hyphsans \sanskrit{संगीत} \hyphsans \sanskrit{नीति} \hyphsans \sanskrit{कथाग्रंथाः}}
+	{\latin{kośa} \hyphlat \latin{kāvya} \hyphlat \latin{campū} \hyphlat \latin{nāṭakālaṃkāra} \hyphlat \latin{saṃgīta} \hyphlat \latin{nīti} \hyphlat \latin{kathāgraṃthāḥ,}}
+	\row{ccccc}
+	{\sanskrit{बहवः} & \sanskrit{स्त्रीणां} & \sanskrit{चोपयुक्ता} & \sanskrit{ग्रंथाः} & \sanskrit{बृहज्ज्योतिषार्णवनामा}}
+	{\latin{bahavaḥ} & \latin{strīṇāṃ} & \latin{copayuktā} & \latin{graṃthāḥ} & \latin{bṛhajjyotiṣārṇavanāmā}}
+	\row{cccc}
+	{\multicolumn{3}{c}{\sanskrit{बहुविचित्रचित्रितोऽयमपूर्वग्रन्थः ।}} & \sanskrit{संस्कृतभाषया}}
+	{\latin{bahuvicitracitrito} & \latin{'yam} & \latin{apūrvagranthaḥ.} & \latin{saṃskṛtabhāṣayā}}
+	\row{c}
+	{\sanskrit{हिन्दीमार्वाड्यन्यतरभाषाग्रन्थास्तत्तच्छास्त्राद्यर्थानु-}}
+	{\latin{hindīmārvāḍyanyatarabhāṣāgranthāstattacchāstrādyarthānu-}}
+	\row{cccc}
+	{\sanskrit{वादकाः} & \sanskrit{चित्राणि} & \sanskrit{पुस्तकमुद्रणोपयोगिन्यो} & \sanskrit{यावत्यस्सा-}}
+	{\latin{vādakāḥ} & \latin{citrāṇi} & \latin{pustakamudraṇopayoginyo} & \latin{yāvatyassā-}}
+	\row{cc}
+	{\sanskrit{मग्र्यः} & \sanskrit{स्वस्वलौकिकव्यवहारोपयोगिचित्रचित्रितालि-}}
+	{\latin{magryaḥ} & \latin{svasvalaukikavyavahāropayogicitracitritāli-}}
+	\row{ccccc}
+	{\sanskrit{खितपत्रवत्पुस्तकानि} & \sanskrit{च} & \sanskrit{मुद्रयित्वा} & \sanskrit{प्रकाशन्ते} & \sanskrit{सुलभेन}}
+	{\latin{khitapatravatpustakāni} & \latin{ca} & \latin{mudrayitvā} & \latin{prakāśante} & \latin{sulabhena}}
+	\row{cccc}
+	{\sanskrit{मूल्येन} & \sanskrit{विक्रयाय ।} & \sanskrit{येषां} & \sanskrit{यत्राभिरुचिस्तत्तत्पुस्तकाद्यु-}}
+	{\latin{mūlyena} & \latin{vikrayāya.} & \latin{yeṣāṃ} & \latin{yatrābhirucistattatpustakādyu-}}
+	\row{ccccc}
+	{\sanskrit{पलब्धय} & \sanskrit{एवं} & \sanskrit{नव्यतया} & \sanskrit{स्वस्वपुस्तकानि} & \sanskrit{मुमुद्रयि-}}
+	{\latin{palabdhaya} & \latin{evaṃ} & \latin{navyatayā} & \latin{svasvapustakāni} & \latin{mumudrayi-}}
+	\row{cccc}
+	{\sanskrit{षुभिः} & \sanskrit{सुलभयोग्यमौल्येन} & \sanskrit{सीसकाक्षरैः} & \sanskrit{स्वच्छोत्त-}}
+	{\latin{ṣubhiḥ} & \latin{sulabhayogyamaulyena} & \latin{sīsakākṣaraiḥ} & \latin{svacchotta-}}
+	\row{ccc}
+	{\sanskrit{मोत्तमपत्रेषु} & \sanskrit{मुद्रिततत्पुस्तकानां} & \sanskrit{स्वस्वसमयानुसारे-}}
+	{\latin{mottamapatreṣu} & \latin{mudritatatpustakānāṃ} & \latin{svasvasamayānusāre-}}
+	\row{ccccc}
+	{\sanskrit{णोपलब्धये} & \sanskrit{च} & \sanskrit{पत्रिकाद्वारातैः} & \sanskrit{प्रेषणीयो} & \sanskrit{ऽस्मि ॥}}
+	{\latin{ṇopalabdhaye} & \latin{ca} & \latin{patrikādvārātaiḥ} & \latin{preṣaṇīyo} & \latin{'smi.}}
+}
+
+\noindent\readingexercise{}
+
+%\clearpage
+%\subsection*{\siddhantafontname{2}}
+%\let\sanskrit\siddhantaII
+%\noindent\readingexercise{}
+
+\end{document}
+
+
+\clearpage
+\siddhanta{श्य} \siddhanta{श्य} \siddhantaII{श्य} \chandas{श्य}
+\section*{variations}
+\begin{tabular}{cccc}
+	\lingual{a} & \siddhanta{अ} & \siddhantaII{अ}\\
+	\lingual{ā} & \siddhanta{आ} & \siddhantaII{आ}\\
+	\lingual{ṛ} & \siddhanta{ऋ} & \siddhantaII{ऋ}\\
+	\lingual{ṝ} & \siddhanta{ॠ} & \siddhantaII{ॠ}\\
+	\lingual{ṇa} & \siddhanta{ण} & \siddhantaII{ण}\\
+	\hline
+	\lingual{jha} & \siddhanta{झ} & \siddhantaII{झ}\\
+	\lingual{jña} & \siddhanta{ज्ञ} & \siddhantaII{ज्ञ}\\
+	\lingual{kṣa} & \siddhanta{क्ष} & \siddhantaII{क्ष}\\
+\end{tabular}
+
