@@ -6,11 +6,12 @@
     * [The ```subsets``` object](#json_subsets)
       * [Rendering specification](#json_rendering)
 * [Devanāgarī resources](#devanagari)
+* [Tocharian resources](#tocharian)
 
 This is a collection of resources I have gathered for several (image based) [Memrise](https://www.memrise.com/) courses, that teach alphabets such as Devanāgarī.
 
 ## <a name="python"></a>Python script
-This is a script that generates&nbsp;PNGs for a set of character, as specified in a JSON file. It calls [ImageMagick](https://www.imagemagick.org/) for creating the&nbsp;PNGs and uses either [Pango](https://developer.gnome.org/pango/stable/PangoMarkupFormat.html) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX) to render the characters.
+This is a script that generates&nbsp;PNGs for a set of character, as specified in a JSON file. It calls [ImageMagick](https://www.imagemagick.org/) for creating the&nbsp;PNGs and uses either [Pango](https://en.wikipedia.org/wiki/Pango) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX) to render the characters.
 
 ```
 usage: render-characters.py [-h] --engine {pango,xelatex}
@@ -74,7 +75,7 @@ Each character string object is identified by a&nbsp;```name``` and can have mul
 ##### <a name="json_rendering"></a>Rendering specification
 As can be seen above, the rendering specification in its most basic form contains only a&nbsp;UTF-8 string. A&nbsp;```font``` can be specified, but if it is absent, the&nbsp;```defaultFont``` specified in the&nbsp;```settings``` is simply fallen back on.
 
-Instead of a&nbsp;UTF-8 string, the specification can also contain an explicit ```pango``` or ```xelatex``` code string to be used instead (in their respective modes). In the case of Pango rendering mode, also the attributes ```pango-flip``` and ```pango-flop``` are available and if set to true, will be set as flags for the rendering call to pango (which will flip the image in the vertical or horizontal direction, respectively).
+Instead of a&nbsp;UTF-8 string, the specification can also contain an explicit [```pango```](https://developer.gnome.org/pango/stable/PangoMarkupFormat.html) or ```xelatex``` code string to be used instead (in their respective modes). In the case of Pango rendering mode, also the attributes ```pango-flip``` and ```pango-flop``` are available and if set to true, will be set as flags for the rendering call to pango (which will flip the image in the vertical or horizontal direction, respectively).
 
 ```javascript
 {
@@ -109,3 +110,17 @@ The associated Memrise course is [Sanskrit devanāgarī](https://www.memrise.com
 Unfortunately, even the most recent printed edition of this book is only a facsimile of the 1966 original. For that reason, some of the devanāgarī characters are either hard to read or awkwardly typeset (see also the original on [google books](https://books.google.nl/books?id=wCwVAAAAIAAJ&lpg=PP1&pg=PA1#v=onepage)). For that reason I found it reasonable to reproduce that part, using more modern technology (like Unicode fonts) so it can be properly read.
 * The fonts used for generating the images for Memrise (as well as in the document mentioned above) are mainly those of the _Siddhanta_ font family, created by [Mihail Bayaryn](https://sites.google.com/site/bayaryn/) (Міхаіл Баярын) and available from his site under a [Creative Commons license](http://creativecommons.org/licenses/by-nc-nd/3.0/).
 * Honourable mention is for the program [Itranslator&nbsp; 2003](https://www.oah.in/Sanskrit/itranslator2003.htm), which is a great help for transliterating ASCII text in [ITRANS notation](https://en.wikipedia.org/wiki/ITRANS) to devanāgarī text. Its font _Sanskrit&nbsp;2003_ helped to create an earlier version of the course.
+
+
+## <a name="tocharian"></a>Tocharian resources
+The associated Memrise course is [Tocharian Brahmi script](https://www.memrise.com/course/353843/tocharian-brahmi-script/).
+* The course image is a scan of a Tocharian manuscript, taken from CEToM [THT&nbsp;94](https://www.univie.ac.at/tocharian/?THT%2094)
+* One set of images for the characters come from the _Tocharisches Elementarbuch (Band 1)_ by Wolfgang Krause and Werner Thomas (1960), [page&nbsp;41](tocharian/images Tocharisches Elementarbuch/Tocharisches-Elementarbuch-p41.png).<br>
+To make this images bigger while smoothing the edges slightly, one could use ImageMagick:
+  ```
+  magick fileIn.png -bordercolor none -border 10
+                    -antialias -resize 250%
+                    -gaussian-blur 4x2
+                    -trim fileOut.png
+  ```
+* Another set of images are taken from [Lee Wilson's proposal](http://www.unicode.org/L2/L2015/15236-tocharian.pdf) to encode the Tocharian script in Unicode, which seems to have been [approved](http://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=bedhbwsx6g). Once included in Unicode, the Tocharian script [should receive a proper font](https://groups.google.com/forum/#!topic/noto-font/DQNqXUY_Pn8) in [Google's Noto project](https://www.google.com/get/noto/).
