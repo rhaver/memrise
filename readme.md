@@ -115,7 +115,7 @@ Unfortunately, even the most recent printed edition of this book is only a facsi
 ## <a name="tocharian"></a>Tocharian resources
 The associated Memrise course is [Tocharian Brahmi script](https://www.memrise.com/course/353843/tocharian-brahmi-script/).
 * The course image is a scan of a Tocharian manuscript, taken from CEToM [THT&nbsp;94](https://www.univie.ac.at/tocharian/?THT%2094)
-* One set of images for the characters come from the _Tocharisches Elementarbuch (Band 1)_ by Wolfgang Krause and Werner Thomas (1960), [page&nbsp;41](tocharian/images Tocharisches Elementarbuch/Tocharisches-Elementarbuch-p41.png).<br>
+* One set of images for the characters come from the _Tocharisches Elementarbuch (Band 1)_ by Wolfgang Krause and Werner Thomas (1960), [page&nbsp;41](https://github.com/rhaver/memrise/blob/master/tocharian/images%20Tocharisches%20Elementarbuch/Tocharisches-Elementarbuch-p41.png).<br>
 To make this images bigger while smoothing the edges slightly, one could use ImageMagick:
   ```
   magick fileIn.png -bordercolor none -border 10
