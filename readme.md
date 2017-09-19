@@ -20,7 +20,7 @@ usage: render-characters.py [-h] --engine {pango,xelatex}
 
 
 ### <a name="json"></a>JSON format
-The JSON specification consists has two main attributes: ```settings``` and&nbsp;```subsets```. They are further specified below. The top level structure of the&nbsp;JSON&nbsp;file is therefore:
+The JSON specification has two main attributes: ```settings``` and&nbsp;```subsets```. They are further specified below. The top level structure of the&nbsp;JSON&nbsp;file is therefore:
 ```javascript
 {
   "settings": {...},
