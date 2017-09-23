@@ -75,7 +75,7 @@ Each character string object is identified by a&nbsp;```name``` and can have mul
 ##### <a name="json_rendering"></a>Rendering specification
 As can be seen above, the rendering specification in its most basic form contains only a&nbsp;UTF-8 string. A&nbsp;```font``` can be specified, but if it is absent, the&nbsp;```defaultFont``` specified in the&nbsp;```settings``` is simply fallen back on.
 
-Instead of a&nbsp;UTF-8 string, the specification can also contain an explicit [```pango```](https://developer.gnome.org/pango/stable/PangoMarkupFormat.html) or ```xelatex``` code string to be used instead (in their respective modes). In the case of Pango rendering mode, also the attributes ```pango-flip``` and ```pango-flop``` are available and if set to true, will be set as flags for the rendering call to pango (which will flip the image in the vertical or horizontal direction, respectively).
+Instead of a&nbsp;UTF-8 string, the specification can also contain an explicit ```pango``` or ```xelatex``` code string to be used instead (in their respective modes). In the case of Pango rendering mode, also the attributes ```pango-flip``` and ```pango-flop``` are available and if set to true, will be set as flags for the rendering call to pango (which will flip the image in the vertical or horizontal direction, respectively).
 
 ```javascript
 {
