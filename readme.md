@@ -32,7 +32,7 @@ The JSON specification has two main attributes: ```settings``` and&nbsp;```subse
 This contains specific settings for the data set:
 * The name for this character set (which will be used to create an output directory)
 * The default font (optional) to be used for rendering
-* A skeleton for the Pango argument string to be fed to ImageMagick (in the case that the Pango rendering mode is selected at the command line).
+* A skeleton for the Pango [argument string](https://developer.gnome.org/pango/stable/PangoMarkupFormat.html) to be fed to ImageMagick (in the case that the Pango rendering mode is selected at the command line).
 * A skeleton for the XeLaTeX code to be executed to an intermediate PDF (in the case that the XeLaTeX rendering mode is selected at the command line).
 
 For the latter two, the character string to be rendered will be inserted into the skeleton string at the point marked by&nbsp;```{0}``` and the font name will be inserted at the point marked by&nbsp;```{1}```.
@@ -106,8 +106,8 @@ Note that&nbsp;– depending on the rendering mode&nbsp;– at least one of the 
 
 ## <a name="devanagari"></a>Devanāgarī resources
 The associated Memrise course is [Sanskrit devanāgarī](https://www.memrise.com/course/231917/sanskrit-devanagari/).
-* [This PDF](https://github.com/rhaver/memrise/raw/master/devanagari/gonda/gonda.pdf) contains a digitized version of the first chapter of Jan Gonda's [_A Concise Elementary Grammar of the Sanskrit Language_](http://www.uapress.ua.edu/product/Concise-Elementary-Grammar-of-the-Sanskrit-Languag,261.aspx) (2nd edition, 2006, ISBN-13 978-08173-5261-5), in which the devanāgarī script is introduced.
-Unfortunately, even the most recent printed edition of this book is only a facsimile of the 1966 original. For that reason, some of the devanāgarī characters are either hard to read or awkwardly typeset (see also the original on [google books](https://books.google.nl/books?id=wCwVAAAAIAAJ&lpg=PP1&pg=PA1#v=onepage)). For that reason I found it reasonable to reproduce that part, using more modern technology (like Unicode fonts) so it can be properly read.
+* [This&nbsp;PDF](https://github.com/rhaver/memrise/raw/master/devanagari/gonda/gonda.pdf) contains a digitized version of the first chapter of Jan Gonda's [_A Concise Elementary Grammar of the Sanskrit Language_](http://www.uapress.ua.edu/product/Concise-Elementary-Grammar-of-the-Sanskrit-Languag,261.aspx) (2nd edition, 2006, ISBN-13 978-08173-5261-5), in which the devanāgarī script is introduced.
+Unfortunately, even the most recent printed edition of this book is only a facsimile of the 1966 original. For that reason, some of the devanāgarī characters are either hard to read or awkwardly typeset (see also the original on [google books](https://books.google.nl/books?id=wCwVAAAAIAAJ&lpg=PP1&pg=PA1#v=onepage)). For that reason I found it reasonable to reproduce that part, using modern technology (like Unicode fonts) so that it can be properly read.
 * The fonts used for generating the images for Memrise (as well as in the document mentioned above) are mainly those of the _Siddhanta_ font family, created by [Mihail Bayaryn](https://sites.google.com/site/bayaryn/) (Міхаіл Баярын) and available from his site under a [Creative Commons license](http://creativecommons.org/licenses/by-nc-nd/3.0/).
 * Honourable mention is for the program [Itranslator&nbsp; 2003](https://www.oah.in/Sanskrit/itranslator2003.htm), which is a great help for transliterating ASCII text in [ITRANS notation](https://en.wikipedia.org/wiki/ITRANS) to devanāgarī text. Its font _Sanskrit&nbsp;2003_ helped to create an earlier version of the course.
 

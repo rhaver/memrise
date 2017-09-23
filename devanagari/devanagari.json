@@ -1,7 +1,7 @@
 {
 	"settings": {
 		"name": "Devanāgarī",
-		"comment": "Some similar character sequences are: [va, ba, gha, dha, kha, rava, sva, dṛ, dda, i, ḍa, ṅa, ī, rḍa, rṅa, rha]",
+		"comment": "Some similar character sequences are: [va, ba, gha, dha, kha, rava, sva, dṛ, dda, ḍa, ṅa, i, jña, jha, hya, ī, rḍa, rṅa, rha]",
 		"defaultFont": "Siddhanta",
 		"pango": "pango:<markup><span font_family=\"{1}\" size=\"192000\"> {0} </span></markup>",
 		"xelatex": "%!TEX TS-program = xelatex\n%!TEX encoding = UTF-8 Unicode\n\\documentclass{{minimal}}\n\\nofiles\n\\usepackage{{fixltx2e}}\n\\usepackage{{fontspec}}\n\\usepackage{{xunicode,xltxtra}}\n\\defaultfontfeatures{{Mapping=tex-text,Scale=MatchLowercase}}\n\\setmainfont[Script=Devanagari]{{{1}}}\n\\begin{{document}}\n\\fontsize{{30pt}}{{30pt}}\\selectfont\n{0}\n\\end{{document}}"
