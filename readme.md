@@ -106,7 +106,7 @@ Note that&nbsp;– depending on the rendering mode&nbsp;– at least one of the 
 
 ## <a name="devanagari"></a>Devanāgarī resources
 The associated Memrise course is [Sanskrit devanāgarī](https://www.memrise.com/course/231917/sanskrit-devanagari/).
-* [This&nbsp;PDF](https://github.com/rhaver/memrise/raw/master/devanagari/gonda/gonda.pdf) contains a digitized version of the first chapter of Jan Gonda's [_A Concise Elementary Grammar of the Sanskrit Language_](http://www.uapress.ua.edu/product/Concise-Elementary-Grammar-of-the-Sanskrit-Languag,261.aspx) (2nd edition, 2006, ISBN-13 978-08173-5261-5), in which the devanāgarī script is introduced.
+* [This&nbsp;PDF](devanagari/gonda/gonda.pdf) contains a digitized version of the first chapter of Jan Gonda's [_A Concise Elementary Grammar of the Sanskrit Language_](http://www.uapress.ua.edu/product/Concise-Elementary-Grammar-of-the-Sanskrit-Languag,261.aspx) (2nd edition, 2006, ISBN-13 978-08173-5261-5), in which the devanāgarī script is introduced.
 Unfortunately, even the most recent printed edition of this book is only a facsimile of the 1966 original. For that reason, some of the devanāgarī characters are either hard to read or awkwardly typeset (see also the original on [google books](https://books.google.nl/books?id=wCwVAAAAIAAJ&lpg=PP1&pg=PA1#v=onepage)). For that reason I found it reasonable to reproduce that part, using modern technology (like Unicode fonts) so that it can be properly read.
 * The fonts used for generating the images for Memrise (as well as in the document mentioned above) are mainly those of the _Siddhanta_ font family, created by [Mihail Bayaryn](https://sites.google.com/site/bayaryn/) (Міхаіл Баярын) and available from his site under a [Creative Commons license](http://creativecommons.org/licenses/by-nc-nd/3.0/).
 * Honourable mention is for the program [Itranslator&nbsp; 2003](https://www.oah.in/Sanskrit/itranslator2003.htm), which is a great help for transliterating ASCII text in [ITRANS notation](https://en.wikipedia.org/wiki/ITRANS) to devanāgarī text. Its font _Sanskrit&nbsp;2003_ helped to create an earlier version of the course.
@@ -115,7 +115,7 @@ Unfortunately, even the most recent printed edition of this book is only a facsi
 ## <a name="tocharian"></a>Tocharian resources
 The associated Memrise course is [Tocharian Brahmi script](https://www.memrise.com/course/353843/tocharian-brahmi-script/).
 * The course image is a scan of a Tocharian manuscript, taken from CEToM [THT&nbsp;94](https://www.univie.ac.at/tocharian/?THT%2094)
-* One set of images for the characters come from the _Tocharisches Elementarbuch (Band 1)_ by Wolfgang Krause and Werner Thomas (1960), [page&nbsp;41](https://github.com/rhaver/memrise/blob/master/tocharian/images%20Tocharisches%20Elementarbuch/Tocharisches-Elementarbuch-p41.png).<br>
+* One set of images for the characters come from the _Tocharisches Elementarbuch (Band 1)_ by Wolfgang Krause and Werner Thomas (1960), [page&nbsp;41](tocharian/images%20Tocharisches%20Elementarbuch/Tocharisches-Elementarbuch-p41.png).<br>
 To make these images bigger while smoothing the edges slightly, one could use ImageMagick:
   ```
   magick fileIn.png -bordercolor none -border 10
