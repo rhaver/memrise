@@ -11,7 +11,7 @@
 This is a collection of resources I have gathered for several (image based) [Memrise](https://www.memrise.com/) courses, that teach alphabets such as Devanāgarī.
 
 ## <a name="python"></a>Python script
-This is a script that generates&nbsp;PNGs for a set of character, as specified in a JSON file. It calls [ImageMagick](https://www.imagemagick.org/) for creating the&nbsp;PNGs and uses either [Pango](https://en.wikipedia.org/wiki/Pango) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX) to render the characters.
+This is a script that generates [PNG&nbsp;images](https://en.wikipedia.org/wiki/Portable_Network_Graphics) for a set of characters, as specified in a JSON file. It calls [ImageMagick](https://www.imagemagick.org/) for creating the&nbsp;PNGs and uses either [Pango](https://en.wikipedia.org/wiki/Pango) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX) to render the characters.
 
 ```
 usage: render-characters.py [-h] --engine {pango,xelatex}
