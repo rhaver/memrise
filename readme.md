@@ -14,10 +14,14 @@
 This is a collection of resources I have created/compiled for several (image based) [Memrise](https://www.memrise.com/) courses, that teach alphabets such as Devanāgarī.
 
 ## <a name="render_memrise"></a>Adding rendered images for words on [Memrise](https://www.memrise.com) (Python script)
-This is a script with a Graphical User Interface (GUI) that allows you to access the editing page of Memrise course through a browser window and render the words of the course's levels, adding those rendered images to the words in a (pre-existing) image column. The rendering engine can be selected through the GUI and can be either [Pango](https://en.wikipedia.org/wiki/Pango) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX). The script only processing those course levels in the browser window that are open/unfolded.
+This is a script with a Graphical User Interface (GUI) that allows you to access the editing page of Memrise course through a browser window and render the words of the course's levels, adding those rendered images to the words in a (pre-existing) image column. The rendering engine can be selected through the GUI and can be either [Pango](https://en.wikipedia.org/wiki/Pango) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX). The script only processes those course levels in the browser window that are open/unfolded.
+
+```
+usage: render_words_on_memrise.py
+```
 
 ### <a name="render_memrise_prerequisites"></a>Prerequisite third party software
-Besides Python&nbsp;3, the script relies on further third party software, in order to access Memrise through a browser window and to render the images. Therefore, the following programs need to be available on your system and callable by the script (by either having their executables in the working directory of the script or by having their executables included in the [operating system's PATH variable](https://en.wikipedia.org/wiki/PATH_%28variable%29)).
+Besides Python&nbsp;3, the script relies on further third party software, in order to access Memrise through a browser window and to render the images. Therefore, the following programs need to be available on your system and callable by the script (by either having their executables in the working directory of the script, or by having their executables included in the [operating system's PATH variable](https://en.wikipedia.org/wiki/PATH_%28variable%29)).
 
 * For access to Memrise through a browser window, either of the following programs needs to be available:
   * [ChromeDriver](http://chromedriver.chromium.org) for use with the Google Chrome browser.
