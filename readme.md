@@ -1,23 +1,41 @@
 # Memrise resources
 
-* [Python script](#python)
-  * [JSON format](#json)
+* [Adding rendered images for words on Memrise (Python script)](#render_memrise)
+  * [Prerequisite third party software](#render_memrise_prerequisites)
+* [Rendering text to PNG image files (Python script)](#json_to_png)
+  * [Prerequisite third party software](#json_to_png_prerequisites)
+  * [JSON input format](#json)
     * [The ```settings``` object](#json_settings)
     * [The ```subsets``` object](#json_subsets)
       * [Rendering specification](#json_rendering)
 * [Devanāgarī resources](#devanagari)
 * [Tocharian resources](#tocharian)
 
-This is a collection of resources I have gathered for several (image based) [Memrise](https://www.memrise.com/) courses, that teach alphabets such as Devanāgarī.
+This is a collection of resources I have created/compiled for several (image based) [Memrise](https://www.memrise.com/) courses, that teach alphabets such as Devanāgarī.
 
-## <a name="python"></a>Python script
-This is a script that generates [PNG&nbsp;images](https://en.wikipedia.org/wiki/Portable_Network_Graphics) for a set of characters, as specified in a JSON file. It calls [ImageMagick](https://www.imagemagick.org/) for creating the&nbsp;PNGs and uses either [Pango](https://en.wikipedia.org/wiki/Pango) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX) to render the characters.
+## <a name="render_memrise"></a>Adding rendered images for words on [Memrise](https://www.memrise.com) (Python script)
+This is a script with a Graphical User Interface (GUI) that allows you to access the editing page of Memrise course through a browser window and render the words of the course's levels, adding those rendered images to the words in a (pre-existing) image column. The rendering engine can be selected through the GUI and can be either [Pango](https://en.wikipedia.org/wiki/Pango) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX). The script only processing those course levels in the browser window that are open/unfolded.
+
+### <a name="render_memrise_prerequisites"></a>Prerequisite third party software
+Besides Python&nbsp;3, the script relies on further third party software, in order to access Memrise through a browser window and to render the images. Therefore, the following programs need to be available on your system and callable by the script (by either having their executables in the working directory of the script or by having their executables included in the [operating system's PATH variable](https://en.wikipedia.org/wiki/PATH_%28variable%29)).
+
+* For access to Memrise through a browser window, either of the following programs needs to be available:
+  * [ChromeDriver](http://chromedriver.chromium.org) for use with the Google Chrome browser.
+  * [geckodriver](https://github.com/mozilla/geckodriver) for use with the Firefox browser.
+* For rendering an item to a [PNG&nbsp;image file](https://en.wikipedia.org/wiki/Portable_Network_Graphics) that is subsequently uploaded to Memrise, the following programs need to be available:
+  * [ImageMagick](https://www.imagemagick.org/).
+  * Additionally, in case XeLaTeX is chosen as the rendering engine, a [TeX distribution](https://www.latex-project.org/get/#tex-distributions) and [Ghostscript](https://www.ghostscript.com) are required.
+
+## <a name="json_to_png"></a>Rendering text to [PNG&nbsp;image files](https://en.wikipedia.org/wiki/Portable_Network_Graphics) (Python script)
+This is a script that generates PNG image files for a set of characters, as specified in a JSON file. It calls [ImageMagick](https://www.imagemagick.org/) for creating the&nbsp;PNGs and uses either [Pango](https://en.wikipedia.org/wiki/Pango) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX) to render the characters.
 
 ```
 usage: render_strings_to_png [-h] --engine {pango,xelatex}
                              JsonSpecificationFile
 ```
 
+### <a name="json_to_png_prerequisites"></a>Prerequisite third party software
+[The same prerequisites as for the previous script apply.](#render_memrise_prerequisites)
 
 ### <a name="json"></a>JSON format
 The JSON specification has two main attributes: ```settings``` and&nbsp;```subsets```. They are further specified below. The top level structure of the&nbsp;JSON&nbsp;file is therefore:
@@ -109,7 +127,7 @@ The associated Memrise course is [Sanskrit devanāgarī](https://www.memrise.com
 * [This&nbsp;PDF](devanagari/gonda/gonda.pdf) contains a digitized version of the first chapter of Jan Gonda's [_A Concise Elementary Grammar of the Sanskrit Language_](http://www.uapress.ua.edu/product/Concise-Elementary-Grammar-of-the-Sanskrit-Languag,261.aspx) (2nd edition, 2006, ISBN-13 978-08173-5261-5), in which the devanāgarī script is introduced.
 Unfortunately, even the most recent printed edition of this book is only a facsimile of the 1966 original. For that reason, some of the devanāgarī characters are either hard to read or awkwardly typeset (see also the original on [google books](https://books.google.nl/books?id=wCwVAAAAIAAJ&lpg=PP1&pg=PA1#v=onepage)). For that reason I found it reasonable to reproduce that part, using modern technology (like Unicode fonts) so that it can be properly read.
 * The fonts used for generating the images for Memrise (as well as in the document mentioned above) are mainly those of the _Siddhanta_ font family, created by [Mihail Bayaryn](https://sites.google.com/site/bayaryn/) (Міхаіл Баярын) and available from his site under a [Creative Commons license](http://creativecommons.org/licenses/by-nc-nd/3.0/).
-* Honourable mention is for the program [Itranslator&nbsp; 2003](https://www.oah.in/Sanskrit/itranslator2003.htm), which is a great help for transliterating ASCII text in [ITRANS notation](https://en.wikipedia.org/wiki/ITRANS) to devanāgarī text. Its font _Sanskrit&nbsp;2003_ helped to create an earlier version of the course.
+* Honourable mention for the program [Itranslator&nbsp; 2003](https://www.oah.in/Sanskrit/itranslator2003.htm), which is a great help for transliterating ASCII text in [ITRANS notation](https://en.wikipedia.org/wiki/ITRANS) to devanāgarī text. Its font _Sanskrit&nbsp;2003_ helped to create an earlier version of the course.
 
 
 ## <a name="tocharian"></a>Tocharian resources
