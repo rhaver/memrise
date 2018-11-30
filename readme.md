@@ -14,8 +14,8 @@ This is a collection of resources I have gathered for several (image based) [Mem
 This is a script that generates [PNG&nbsp;images](https://en.wikipedia.org/wiki/Portable_Network_Graphics) for a set of characters, as specified in a JSON file. It calls [ImageMagick](https://www.imagemagick.org/) for creating the&nbsp;PNGs and uses either [Pango](https://en.wikipedia.org/wiki/Pango) or&nbsp;[XeLaTeX](https://en.wikipedia.org/wiki/XeLaTeX) to render the characters.
 
 ```
-usage: render-characters.py [-h] --engine {pango,xelatex}
-                            JsonSpecificationFile
+usage: render_strings_to_png [-h] --engine {pango,xelatex}
+                             JsonSpecificationFile
 ```
 
 
