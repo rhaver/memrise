@@ -368,7 +368,7 @@ class GUI:
         """Build the main application window."""
         p = 10
         # set window title
-        master.title('Memrise image renderer (for Hebrew)')
+        master.title('Memrise image renderer')
         # use a frame for the comboboxes
         frame_options = tk.Frame(master)
         frame_options.pack()
