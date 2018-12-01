@@ -20,6 +20,8 @@ This is a script with a Graphical User Interface (GUI) that allows you to access
 usage: render_words_on_memrise.py
 ```
 
+![GUI of the script for rendering images for words on Memrise](render_words_on_memrise_main.png)
+
 ### <a name="render_memrise_prerequisites"></a>Prerequisite third party software
 Besides Python&nbsp;3, the script relies on further third party software, in order to access Memrise through a browser window and to render the images. Therefore, the following programs need to be available on your system and callable by the script (by either having their executables in the working directory of the script, or by having their executables included in the [operating system's PATH variable](https://en.wikipedia.org/wiki/PATH_%28variable%29)).
 
